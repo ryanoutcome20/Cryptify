@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classd_e_s" xml:lang="en-US">
+<title>dES Class Reference</title>
+<indexterm><primary>dES</primary></indexterm>
+<para>Inheritance diagram for dES:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classd_e_s.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_classd_e_s_1ab7d3f1de9ef34f79f3f5e7e27e57e7d2">Encrypt</link> (string Content, byte[] Key)</para>
+</listitem>
+            <listitem><para>string <link linkend="_classd_e_s_1adae487ddd9083de3b77c27e63b655de6">Decrypt</link> (string Content, byte[] Key)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_interface_i_encryption_algorithm">IEncryptionAlgorithm</link><simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_classd_e_s_1ae6546ddc6965fc8b175cd8a2c436d6db">Name</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Properties inherited from <link linkend="_interface_i_encryption_algorithm">IEncryptionAlgorithm</link><section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classd_e_s_1adae487ddd9083de3b77c27e63b655de6"/><section>
+    <title>Decrypt()</title>
+<indexterm><primary>Decrypt</primary><secondary>dES</secondary></indexterm>
+<indexterm><primary>dES</primary><secondary>Decrypt</secondary></indexterm>
+<para><computeroutput>string dES.Decrypt (string Content, byte[] Key)</computeroutput></para><para>
+Implements <link linkend="_interface_i_encryption_algorithm">IEncryptionAlgorithm</link>.</para>
+</section>
+<anchor xml:id="_classd_e_s_1ab7d3f1de9ef34f79f3f5e7e27e57e7d2"/><section>
+    <title>Encrypt()</title>
+<indexterm><primary>Encrypt</primary><secondary>dES</secondary></indexterm>
+<indexterm><primary>dES</primary><secondary>Encrypt</secondary></indexterm>
+<para><computeroutput>string dES.Encrypt (string Content, byte[] Key)</computeroutput></para><para>
+Implements <link linkend="_interface_i_encryption_algorithm">IEncryptionAlgorithm</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_classd_e_s_1ae6546ddc6965fc8b175cd8a2c436d6db"/><section>
+    <title>Name</title>
+<indexterm><primary>Name</primary><secondary>dES</secondary></indexterm>
+<indexterm><primary>dES</primary><secondary>Name</secondary></indexterm>
+<para><computeroutput>string dES.Name<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_interface_i_encryption_algorithm">IEncryptionAlgorithm</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/Algorithms/DES.cs</section>
+</section>

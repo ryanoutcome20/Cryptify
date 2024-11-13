@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_key_generator" xml:lang="en-US">
+<title>KeyGenerator Class Reference</title>
+<indexterm><primary>KeyGenerator</primary></indexterm>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_key_generator_1a8dbe97be57c1d61f0853ad370844c82a"/>static byte[] <emphasis role="strong">GenerateKey</emphasis> (string Password)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_key_generator_1a6efaff027efeb1c03400798f1994c491"/>static byte[] <emphasis role="strong">GenerateStableKey</emphasis> (string Password)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/Base/Keys.cs</section>

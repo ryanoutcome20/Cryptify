@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_tripled_e_s" xml:lang="en-US">
+<title>TripledES Class Reference</title>
+<indexterm><primary>TripledES</primary></indexterm>
+<para>Inheritance diagram for TripledES:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_tripled_e_s.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_tripled_e_s_1a6b8eb66b829b64c6eb09283852508e93">Encrypt</link> (string Content, byte[] Key)</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_tripled_e_s_1a71019e11b518ee01ed0e7c03e8f2c013">Decrypt</link> (string Content, byte[] Key)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_interface_i_encryption_algorithm">IEncryptionAlgorithm</link><simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_tripled_e_s_1ad597e4929a05e339f36def9faba91979">Name</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Properties inherited from <link linkend="_interface_i_encryption_algorithm">IEncryptionAlgorithm</link><section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_tripled_e_s_1a71019e11b518ee01ed0e7c03e8f2c013"/><section>
+    <title>Decrypt()</title>
+<indexterm><primary>Decrypt</primary><secondary>TripledES</secondary></indexterm>
+<indexterm><primary>TripledES</primary><secondary>Decrypt</secondary></indexterm>
+<para><computeroutput>string TripledES.Decrypt (string Content, byte[] Key)</computeroutput></para><para>
+Implements <link linkend="_interface_i_encryption_algorithm">IEncryptionAlgorithm</link>.</para>
+</section>
+<anchor xml:id="_class_tripled_e_s_1a6b8eb66b829b64c6eb09283852508e93"/><section>
+    <title>Encrypt()</title>
+<indexterm><primary>Encrypt</primary><secondary>TripledES</secondary></indexterm>
+<indexterm><primary>TripledES</primary><secondary>Encrypt</secondary></indexterm>
+<para><computeroutput>string TripledES.Encrypt (string Content, byte[] Key)</computeroutput></para><para>
+Implements <link linkend="_interface_i_encryption_algorithm">IEncryptionAlgorithm</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_tripled_e_s_1ad597e4929a05e339f36def9faba91979"/><section>
+    <title>Name</title>
+<indexterm><primary>Name</primary><secondary>TripledES</secondary></indexterm>
+<indexterm><primary>TripledES</primary><secondary>Name</secondary></indexterm>
+<para><computeroutput>string TripledES.Name<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_interface_i_encryption_algorithm">IEncryptionAlgorithm</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/Algorithms/TripleDES.cs</section>
+</section>

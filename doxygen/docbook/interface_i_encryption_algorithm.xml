@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_interface_i_encryption_algorithm" xml:lang="en-US">
+<title>IEncryptionAlgorithm Interface Reference</title>
+<indexterm><primary>IEncryptionAlgorithm</primary></indexterm>
+<para>Inheritance diagram for IEncryptionAlgorithm:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="interface_i_encryption_algorithm.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_interface_i_encryption_algorithm_1a7177a949c8b6da1b903068a4159ad101"/>string <emphasis role="strong">Encrypt</emphasis> (string Content, byte[] Key)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_interface_i_encryption_algorithm_1ad6fcce5574a042afe1ddcd854658031c"/>string <emphasis role="strong">Decrypt</emphasis> (string Content, byte[] Key)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_interface_i_encryption_algorithm_1a5e7eefca78a45544517b6e095c753085"/>string <emphasis role="strong">Name</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this interface was generated from the following file:</para>
+src/Base/IEncryption.cs</section>

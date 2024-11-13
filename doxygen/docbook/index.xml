@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
+    <info>
+    <title>Cryptify</title>
+    </info>
+<chapter>
+    <title>Namespace Documentation</title>
+<xi:include href="namespace_cryptify.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_cryptify_1_1_properties.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Class Documentation</title>
+    <xi:include href="class_a_e_s.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classd_e_s.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_engine.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="interface_i_encryption_algorithm.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_key_generator.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_cryptify_1_1_main.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_tripled_e_s.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

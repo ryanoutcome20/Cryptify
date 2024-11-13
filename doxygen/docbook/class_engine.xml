@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_engine" xml:lang="en-US">
+<title>Engine Class Reference</title>
+<indexterm><primary>Engine</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_engine_1aa6de0fd07078f5151c3a8df0588bb537"/><emphasis role="strong">Engine</emphasis> (<link linkend="_interface_i_encryption_algorithm">IEncryptionAlgorithm</link> _Algorithm)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_engine_1af2eaa0ccde85ab207eb9446382c9fafc"/>void <emphasis role="strong">Process</emphasis> (string Content, string Password, bool Decrypting)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_engine_1ae6d1c55f78715416edef50c7e65d7c56"/><link linkend="_interface_i_encryption_algorithm">IEncryptionAlgorithm</link> <emphasis role="strong">Algorithm</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/Base/Engine.cs</section>

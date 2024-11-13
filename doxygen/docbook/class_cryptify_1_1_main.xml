@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_cryptify_1_1_main" xml:lang="en-US">
+<title>Cryptify.Main Class Reference</title>
+<indexterm><primary>Cryptify.Main</primary></indexterm>
+<para>Inheritance diagram for Cryptify.Main:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_cryptify_1_1_main.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_cryptify_1_1_main_1aabdbc824af4a412ca84970255dc65c5f">Dispose</link> (bool disposing)</para>
+
+<para>Clean up any resources being used. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_cryptify_1_1_main_1aabdbc824af4a412ca84970255dc65c5f"/><section>
+    <title>Dispose()</title>
+<indexterm><primary>Dispose</primary><secondary>Cryptify.Main</secondary></indexterm>
+<indexterm><primary>Cryptify.Main</primary><secondary>Dispose</secondary></indexterm>
+<para><computeroutput>override void Cryptify.Main.Dispose (bool disposing)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Clean up any resources being used. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>disposing</entry><entry>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/Form1.cssrc/Form1.Designer.cs</section>
+</section>
