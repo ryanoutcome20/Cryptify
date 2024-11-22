@@ -42,6 +42,13 @@ public class Engine
          * The issue is really the key size won't be correct.
         */
 
+        // Split string.
+        string[] Split = Content.Split('\n');
+
+        // Check if decrypting or encrypting.
+        bool Decrypting = IsDecrypting(Split);
+
+        // Generate key after checking decrypting (it switches algorithms sometimes).
         byte[] Key = Algorithm.Name == "AES" ? KeyGenerator.GenerateKey(Password) : KeyGenerator.GenerateStableKey(Password);
 
         // Usually occurs with pittyfully weak keys or litterally empty keys.
@@ -51,15 +58,12 @@ public class Engine
             return;
         }
 
-        // Check if decrypting or encrypting.
-        bool Decrypting = IsDecrypting(Content);
-
         // May fail if you give it an invalid password or file. This is just here as a backup.
         try
         {
             if (Decrypting)
             {
-                Save(Algorithm.Decrypt(Content, Key), "All Files (*.*)|*.*");
+                Save(Algorithm.Decrypt(GenerateBody(Split), Key), "All Files (*.*)|*.*");
             }
             else
             {
@@ -72,9 +76,23 @@ public class Engine
         }
     }
 
-    private bool IsDecrypting(string Content)
+    private string GenerateBody(string[] Content)
     {
-        string[] Header = Content.Split('\n')[0].Split(':');
+        // Generates the "body" from the full string containing the "header".
+        string Final = "";
+
+        // We use one here on purpose to make sure we don't pickup the invalid line.
+        for (int i = 1; i < Content.Length; i++)
+        {
+            Final = Final + Content[i];
+        }
+
+        return Final;
+    }
+
+    private bool IsDecrypting(string[] Content)
+    {
+        string[] Header = Content[0].Split(':');
         
         if(Header.Length != 2 || Header[1] != "Cryptify")
             return false;
