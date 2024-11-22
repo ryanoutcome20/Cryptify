@@ -7,7 +7,9 @@
         <itemizedlist>
             <listitem><para><anchor xml:id="_class_engine_1aa6de0fd07078f5151c3a8df0588bb537"/><emphasis role="strong">Engine</emphasis> (<link linkend="_interface_i_encryption_algorithm">IEncryptionAlgorithm</link> _Algorithm)</para>
 </listitem>
-            <listitem><para><anchor xml:id="_class_engine_1af2eaa0ccde85ab207eb9446382c9fafc"/>void <emphasis role="strong">Process</emphasis> (string Content, string Password, bool Decrypting)</para>
+            <listitem><para><anchor xml:id="_class_engine_1ae995c71daad2cb60e19ec4746f3f98a1"/>void <emphasis role="strong">SwitchAlgorithm</emphasis> (int Index)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_engine_1a40bd6eaa73316cb923d8923e3d24e35e"/>void <emphasis role="strong">Process</emphasis> (string Content, string Password, int Index)</para>
 </listitem>
         </itemizedlist>
 </simplesect>
