@@ -1,5 +1,7 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 public class Engine
 {
@@ -15,7 +17,23 @@ public class Engine
         Algorithm = _Algorithm;
     }
 
-    public void Process(string Content, string Password, bool Decrypting)
+    public void SwitchAlgorithm(int Index)
+    {
+        switch (Index)
+        {
+            case 0:
+                Algorithm = new AES();
+                break;
+            case 1:
+                Algorithm = new dES();
+                break;
+            default:
+                Algorithm = new TripledES();
+                break;
+        }
+    }
+
+    public void Process(string Content, string Password, int Index)
     {
         /*
          * Used to have RC2 support, hence the seperation in key generators. 
@@ -33,6 +51,9 @@ public class Engine
             return;
         }
 
+        // Check if decrypting or encrypting.
+        bool Decrypting = IsDecrypting(Content);
+
         // May fail if you give it an invalid password or file. This is just here as a backup.
         try
         {
@@ -42,7 +63,7 @@ public class Engine
             }
             else
             {
-                Save(Algorithm.Encrypt(Content, Key), "Cryptify Files (*.cryptify)|*.cryptify|All Files (*.*)|*.*");
+                Save(Algorithm.Encrypt(Content, Key), "Cryptify Files (*.cryptify)|*.cryptify|All Files (*.*)|*.*", Index + ":Cryptify\n");
             }
         }
         catch
@@ -51,8 +72,22 @@ public class Engine
         }
     }
 
-    private static void Save( string Content, string Filter )
+    private bool IsDecrypting(string Content)
     {
+        string[] Header = Content.Split('\n')[0].Split(':');
+        
+        if(Header.Length != 2 || Header[1] != "Cryptify")
+            return false;
+
+        SwitchAlgorithm(Convert.ToInt32(Header[0]));
+
+        return true;
+    }
+
+    private static void Save(string Content, string Filter, string Header = "")
+    {
+        Content = Header + Content;
+     
         using (SaveFileDialog saveFileDialog = new SaveFileDialog())
         {
             saveFileDialog.Filter = Filter;

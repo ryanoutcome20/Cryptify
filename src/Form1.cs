@@ -34,7 +34,7 @@ namespace Cryptify
                     return;
                 }
 
-                EncryptionEngine.Process(Content, PasswordBox.Text, openFileDialog1.FileName.EndsWith(".cryptify"));
+                EncryptionEngine.Process(Content, PasswordBox.Text, AlgorithmBox.SelectedIndex);
             }
         }
 
@@ -50,22 +50,7 @@ namespace Cryptify
 
         private void Algorithm_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            IEncryptionAlgorithm _Algorithm;
-
-            switch (AlgorithmBox.SelectedIndex)
-            {
-                case 0:
-                    _Algorithm = new AES();
-                    break;
-                case 1:
-                    _Algorithm = new dES();
-                    break;
-                default:
-                    _Algorithm = new TripledES();
-                    break;
-            }
-
-            EncryptionEngine.Algorithm = _Algorithm;
+            EncryptionEngine.SwitchAlgorithm(AlgorithmBox.SelectedIndex);
         }
     }
 }
