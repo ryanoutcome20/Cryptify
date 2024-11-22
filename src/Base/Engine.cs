@@ -1,5 +1,7 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 public class Engine
 {
@@ -15,7 +17,23 @@ public class Engine
         Algorithm = _Algorithm;
     }
 
-    public void Process(string Content, string Password, bool Decrypting)
+    public void SwitchAlgorithm(int Index)
+    {
+        switch (Index)
+        {
+            case 0:
+                Algorithm = new AES();
+                break;
+            case 1:
+                Algorithm = new dES();
+                break;
+            default:
+                Algorithm = new TripledES();
+                break;
+        }
+    }
+
+    public void Process(string Content, string Password, int Index)
     {
         /*
          * Used to have RC2 support, hence the seperation in key generators. 
@@ -24,6 +42,13 @@ public class Engine
          * The issue is really the key size won't be correct.
         */
 
+        // Split string.
+        string[] Split = Content.Split('\n');
+
+        // Check if decrypting or encrypting.
+        bool Decrypting = IsDecrypting(Split);
+
+        // Generate key after checking decrypting (it switches algorithms sometimes).
         byte[] Key = Algorithm.Name == "AES" ? KeyGenerator.GenerateKey(Password) : KeyGenerator.GenerateStableKey(Password);
 
         // Usually occurs with pittyfully weak keys or litterally empty keys.
@@ -38,11 +63,11 @@ public class Engine
         {
             if (Decrypting)
             {
-                Save(Algorithm.Decrypt(Content, Key), "All Files (*.*)|*.*");
+                Save(Algorithm.Decrypt(GenerateBody(Split), Key), "All Files (*.*)|*.*");
             }
             else
             {
-                Save(Algorithm.Encrypt(Content, Key), "Cryptify Files (*.cryptify)|*.cryptify|All Files (*.*)|*.*");
+                Save(Algorithm.Encrypt(Content, Key), "Cryptify Files (*.cryptify)|*.cryptify|All Files (*.*)|*.*", Index + ":Cryptify\n");
             }
         }
         catch
@@ -51,8 +76,36 @@ public class Engine
         }
     }
 
-    private static void Save( string Content, string Filter )
+    private string GenerateBody(string[] Content)
     {
+        // Generates the "body" from the full string containing the "header".
+        string Final = "";
+
+        // We use one here on purpose to make sure we don't pickup the invalid line.
+        for (int i = 1; i < Content.Length; i++)
+        {
+            Final = Final + Content[i];
+        }
+
+        return Final;
+    }
+
+    private bool IsDecrypting(string[] Content)
+    {
+        string[] Header = Content[0].Split(':');
+        
+        if(Header.Length != 2 || Header[1] != "Cryptify")
+            return false;
+
+        SwitchAlgorithm(Convert.ToInt32(Header[0]));
+
+        return true;
+    }
+
+    private static void Save(string Content, string Filter, string Header = "")
+    {
+        Content = Header + Content;
+     
         using (SaveFileDialog saveFileDialog = new SaveFileDialog())
         {
             saveFileDialog.Filter = Filter;
