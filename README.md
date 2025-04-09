@@ -1,11 +1,13 @@
 # Cryptify
 
+## Overview
 A simple yet elegant file encryption and decryption tool built with the C# .NET Framework and WinForms. It allows users to securely encrypt and decrypt files using different encryption algorithms, including AES, DES, and TripleDES.
 
-## Features
-   - **Selectable & customizable algorithm**: Choose between AES, DES, or TripleDES to secure your files.
-   - **Simple UI**: An easy to navigate and use interface.
-   - **Customizable Encryption**: Easily swap out encryption algorithms or extend the application with new methods.
+   * **Selectable & customizable algorithm**: Choose between AES, DES, or TripleDES to secure your files.
+   * **Simple UI**: An easy to navigate and use interface.
+   * **Customizable Encryption**: Easily swap out encryption algorithms or extend the application with new methods.
+   * **Modular**: For developers, the encryption system is modular and easy to integrate new algorithms into.
+   * **Easily Built**: For developers, the encryption system comes with an easy to use batch file to build it automatically.
 
 ## Getting Started
 
@@ -27,13 +29,15 @@ Either install using the [releases](https://github.com/ryanoutcome20/Cryptify/re
    git clone https://github.com/ryanoutcome20/cryptify.git
    ```
 2. Running the build batch file included in the base of the directory.
-3. Running the file generated at "*./src/bin/Release/Cryptify.exe*".
+3. Running the file generated at: `./src/bin/Release/Cryptify.exe`.
 
 ### Usage
 
 1. **Choose an Algorithm**: Select one of the algorithms (AES, DES, or TripleDES) from the dropdown menu.
 
-2. **Select a File**: Click the folder icon or drag-and-drop the file(s) you want to encrypt or decrypt. Decryption will be based on if the file ends with the *.cryptify* extension.
+2. **Select a File**: Click the folder icon or drag-and-drop the file(s) you want to encrypt or decrypt.
+
+## Additional Information
 
 ### Contributing
 
